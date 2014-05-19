@@ -1,4 +1,4 @@
-package nz.co.aetheric.maven.plugin.compiler.closure;
+package nz.co.aetheric.maven.plugin.compiler.javascript;
 
 import org.apache.maven.plugin.logging.Log;
 

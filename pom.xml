@@ -14,7 +14,7 @@
 	</parent>
 
 	<groupId>nz.co.aetheric.maven</groupId>
-	<artifactId>plugin-closure-compiler</artifactId>
+	<artifactId>plugin-compiler-javascript</artifactId>
 	<version>1.1.0-SNAPSHOT</version>
 	<packaging>maven-plugin</packaging>
 

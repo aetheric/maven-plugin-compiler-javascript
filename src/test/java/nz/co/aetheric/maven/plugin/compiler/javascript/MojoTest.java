@@ -1,4 +1,4 @@
-package nz.co.aetheric.maven.plugin.compiler.closure;
+package nz.co.aetheric.maven.plugin.compiler.javascript;
 
 import org.apache.maven.plugin.Mojo;
 import org.apache.maven.plugin.MojoExecutionException;
