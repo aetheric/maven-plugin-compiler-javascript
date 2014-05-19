@@ -1,7 +1,7 @@
 function which() {
-    alert("one");
+	alert("one");
 }
 
 function version() {
-    alert("1.0.0")
+	alert("1.0.0")
 }
