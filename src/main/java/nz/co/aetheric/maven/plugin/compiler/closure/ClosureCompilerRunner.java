@@ -1,4 +1,4 @@
-package com.dasberg.maven.plugins;
+package nz.co.aetheric.maven.plugin.compiler.closure;
 
 import com.google.javascript.jscomp.CommandLineRunner;
 

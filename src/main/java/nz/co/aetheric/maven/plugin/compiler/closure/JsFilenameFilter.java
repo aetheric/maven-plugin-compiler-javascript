@@ -1,4 +1,4 @@
-package com.dasberg.maven.plugins;
+package nz.co.aetheric.maven.plugin.compiler.closure;
 
 import java.io.File;
 import java.io.FilenameFilter;
