@@ -1,0 +1,21 @@
+
+# IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse
+.settings/
+.checkstyle
+.classpath
+.project
+
+# Config
+rebel.xml
+logback.xml
+
+# Build
+target/
+bin/
+*.log

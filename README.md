@@ -1,27 +1,33 @@
-maven-closure-compiler-plugin
-=========================
+Maven google-closure-compiler Plugin
+====================================
 
-**Motivation**  
-Google Closure-compiler doesn't have a maven plugin yet.
+Forked from [mdasberg/maven-closure-compiler-plugin](https://github.com/mdasberg/maven-closure-compiler-plugin), with
+additions from [blizzy78/maven-closure-compiler-plugin](https://github.com/blizzy78/maven-closure-compiler-plugin).
 
 **Usage**   
 Add the following to your maven build plugins.
 
+```XML
+<plugin>
+	<groupId>nz.co.aetheric.maven</groupId>
+	<artifactId>plugin-closure-compiler</artifactId>
+	<version>1.1.0</version>
+	<configuration>
+		<compilation_level>SIMPLE_OPTIMIZATIONS</compilation_level>
+		<recursive>true</recursive>
+		<suffix>.min.js</suffix>
+		<srcDir>${project.basedir}/src/main/javascript</js_dir>
+		<outDir>${project.build.outputDirectory}/script</js_output_dir>
+		<version>1.0.0</version>
+	</configuration>
+</plugin>
+```
 
-    <plugin>
-        <groupId>com.dasberg.maven.plugins</groupId>
-        <artifactId>maven-closure-compiler-plugin</artifactId>
-        <version>${maven-closure-compiler-plugin.version}</version>
-        <configuration>
-            <compilation_level>ADVANCED_OPTIMIZATIONS</compilation_level>
-            <js_dir>src/test/process</js_dir>
-            <js_output_dir>src/test/resources</js_output_dir>
-            <version>1.0.0</version>
-        </configuration>
-    </plugin>
+As you can see there are 4 parameters to the operation:
 
-As you can see there are 4 parameters to the widget:    
-1: **compilation_level** is a optional parameter which uses SIMPLE_OPTIMIZATIONS as default.    
-2: **js_dir** is a required parameter which specifies the location of the uncompiled files.     
-3. **js_output_dir** is a required parameter which specifies the location where the compiled files are put.  
+1. **compilation_level** is a optional parameter which uses SIMPLE_OPTIMIZATIONS as default.
+2. **recursive** is whether the file scanner should follow down directories.
+3. **suffix** is what gets put at the end of the compiled filename.
+2. **srcDir** is the location of the uncompiled files.
+3. **outDir** is the location where the compiled files are put.
 4. **version** is an optional parameter which is used to add a version number to the compiled files.    

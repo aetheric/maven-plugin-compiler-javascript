@@ -1,19 +1,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.dasberg.maven.plugins</groupId>
-    <artifactId>maven-closure-compiler-plugin</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+	<parent>
+		<groupId>nz.co.aetheric.parent</groupId>
+		<artifactId>maven-parent-global</artifactId>
+		<version>1.1.0</version>
+	</parent>
+
+    <groupId>nz.co.aetheric.maven</groupId>
+    <artifactId>plugin-closure-compiler</artifactId>
+    <version>1.1.0-SNAPSHOT</version>
     <packaging>maven-plugin</packaging>
 
-    <name>maven-closure-compiler-plugin</name>
-    <url>https://github.com/mdasberg/maven-closure-compiler-plugin</url>
-
-    <parent>
-        <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>
-        <version>7</version>
-    </parent>
+    <name>Maven google-closure-compiler Plugin</name>
+    <url>https://github.com/tzrlk/maven-closure-compiler-plugin</url>
 
     <licenses>
         <license>
@@ -23,9 +23,9 @@
         </license>
     </licenses>
     <scm>
-        <connection>scm:git:git@github.com:mdasberg/maven-closure-compiler-plugin.git</connection>
-        <developerConnection>scm:git:git@github.com:mdasberg/maven-closure-compiler-plugin.git</developerConnection>
-        <url>git@github.com:mdasberg/maven-closure-compiler-plugin.git</url>
+        <url>https://github.com/Tzrlk/maven-closure-compiler-plugin.git</url>
+        <connection>scm:git:git://github.com:Tzrlk/maven-closure-compiler-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:Tzrlk/maven-closure-compiler-plugin.git</developerConnection>
     </scm>
 
     <properties>
@@ -130,14 +130,28 @@
     </profiles>
 
     <developers>
+
+		<developer>
+			<id>tzrlk</id>
+			<name>Peter Cummuskey</name>
+			<email>peterc@aetheric.co.nz</email>
+			<organization>Aetheric Engineering</organization>
+			<url>http://gplus.to/tzrlk</url>
+			<roles>
+				<role>Architect</role>
+				<role>Developer</role>
+			</roles>
+		</developer>
+
         <developer>
             <id>mischa</id>
             <name>Mischa Dasberg</name>
             <email>mischa@dasberg.info</email>
             <roles>
-                <role>Architect</role>
-                <role>Developer</role>
+                <role>Original Architect</role>
+                <role>Original Developer</role>
             </roles>
         </developer>
+
     </developers>
 </project>
