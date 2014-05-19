@@ -1,3 +1,4 @@
+/*
 package nz.co.aetheric.maven.plugin.compiler.javascript;
 
 import org.apache.maven.plugin.Mojo;
@@ -7,11 +8,12 @@ import org.apache.maven.plugin.testing.AbstractMojoTestCase;
 
 import java.io.File;
 
+*/
 /**
  * Test class for Mojo.
  *
  * @author mischa
- */
+ *//*
 public class MojoTest extends AbstractMojoTestCase {
 	private static final String TARGET_DIR = "src/test/resources";
 	private static final String SOURCE_DIR = "src/test/process";
@@ -84,21 +86,24 @@ public class MojoTest extends AbstractMojoTestCase {
 		cleanTargetDirectory();
 	}
 
-	/**
+	*/
+/**
 	 * Cleans the target directory by removing all compiled files.
-	 */
+	 *//*
 	private void cleanTargetDirectory() {
 		for (File file : getCompiledFiles()) {
 			file.delete();
 		}
 	}
 
-	/**
+	*/
+/**
 	 * Get all the compiled files.
-	 */
+	 *//*
 	private File[] getCompiledFiles() {
 		final File targetDir = new File(TARGET_DIR);
 		return targetDir.listFiles(new JsFilenameFilter());
 	}
 
 }
+*/
