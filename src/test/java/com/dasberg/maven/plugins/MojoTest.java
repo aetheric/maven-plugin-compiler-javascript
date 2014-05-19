@@ -31,35 +31,35 @@ public class MojoTest extends AbstractMojoTestCase {
 	}
 
 	public void testShouldFailToExecuteBecauseConfigurationIsNotValid() throws MojoExecutionException, MojoFailureException, IllegalAccessException {
-		setVariableValueToObject(mojo, "js_dir", null);
-		setVariableValueToObject(mojo, "js_output_dir", null);
+		setVariableValueToObject(mojo, "srcDir", null);
+		setVariableValueToObject(mojo, "outDir", null);
 		// target configuration param not set
-		setVariableValueToObject(mojo, "js_dir", new File(SOURCE_DIR));
+		setVariableValueToObject(mojo, "srcDir", new File(SOURCE_DIR));
 		mojo.execute();
 		assertEquals("The given directories are not valid or are missing. Please check the configuration.", mojoLogger.error());
 		mojoLogger.reset();
 		// source configuration param not set
-		setVariableValueToObject(mojo, "js_dir", null);
-		setVariableValueToObject(mojo, "js_output_dir", new File(TARGET_DIR));
+		setVariableValueToObject(mojo, "srcDir", null);
+		setVariableValueToObject(mojo, "outDir", new File(TARGET_DIR));
 		mojo.execute();
 		assertEquals("The given directories are not valid or are missing. Please check the configuration.", mojoLogger.error());
 		mojoLogger.reset();
 		// invalid source configuration param not set
-		setVariableValueToObject(mojo, "js_dir", new File("invalid"));
-		setVariableValueToObject(mojo, "js_output_dir", new File(TARGET_DIR));
+		setVariableValueToObject(mojo, "srcDir", new File("invalid"));
+		setVariableValueToObject(mojo, "outDir", new File(TARGET_DIR));
 		mojo.execute();
 		assertEquals("The given directories are not valid or are missing. Please check the configuration.", mojoLogger.error());
 		mojoLogger.reset();
 		// invalid target configuration param not set
-		setVariableValueToObject(mojo, "js_dir", new File(SOURCE_DIR));
-		setVariableValueToObject(mojo, "js_output_dir", new File("invalid"));
+		setVariableValueToObject(mojo, "srcDir", new File(SOURCE_DIR));
+		setVariableValueToObject(mojo, "outDir", new File("invalid"));
 		mojo.execute();
 		assertEquals("The given directories are not valid or are missing. Please check the configuration.", mojoLogger.error());
 	}
 
 	public void testExecuteSuccessful() throws IllegalAccessException, MojoExecutionException, MojoFailureException {
-		setVariableValueToObject(mojo, "js_dir", new File(SOURCE_DIR));
-		setVariableValueToObject(mojo, "js_output_dir", new File(TARGET_DIR));
+		setVariableValueToObject(mojo, "srcDir", new File(SOURCE_DIR));
+		setVariableValueToObject(mojo, "outDir", new File(TARGET_DIR));
 		mojo.execute();
 		assertEquals("", mojoLogger.error());
 		File[] compiledFiles = getCompiledFiles();

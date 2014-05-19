@@ -56,36 +56,34 @@
 	</developers>
 
 	<properties>
-		<maven-plugin-api.version>2.0</maven-plugin-api.version>
-		<maven-closure-compiler.version>r1459</maven-closure-compiler.version>
-		<commons-lang.version>2.6</commons-lang.version>
-		<commons-io.version>2.1</commons-io.version>
+		<version.maven>3.2.1</version.maven>
 	</properties>
 
 	<dependencies>
 
 		<dependency>
 			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-core</artifactId>
+			<version>${version.maven}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.maven</groupId>
 			<artifactId>maven-plugin-api</artifactId>
-			<version>${maven-plugin-api.version}</version>
+			<version>${version.maven}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.maven.plugin-tools</groupId>
+			<artifactId>maven-plugin-annotations</artifactId>
+			<version>3.3</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>com.google.javascript</groupId>
 			<artifactId>closure-compiler</artifactId>
-			<version>${maven-closure-compiler.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>commons-lang</groupId>
-			<artifactId>commons-lang</artifactId>
-			<version>${commons-lang.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>${commons-io.version}</version>
+			<version>r1459</version>
 		</dependency>
 
 		<dependency>
@@ -99,6 +97,35 @@
 
 	<build>
 		<plugins>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-plugin-plugin</artifactId>
+				<version>3.3</version>
+
+				<configuration>
+					<!-- see http://jira.codehaus.org/browse/MNG-5346 -->
+					<skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
+				</configuration>
+
+				<executions>
+
+					<execution>
+						<id>mojo-descriptor</id>
+						<goals>
+							<goal>descriptor</goal>
+						</goals>
+					</execution>
+
+					<execution>
+						<id>help-goal</id>
+						<goals>
+							<goal>helpmojo</goal>
+						</goals>
+					</execution>
+
+				</executions>
+			</plugin>
 
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
