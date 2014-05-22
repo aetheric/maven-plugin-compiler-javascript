@@ -134,6 +134,25 @@
 				</executions>
 			</plugin>
 
+			<plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+				<version>0.8</version>
+				<configuration>
+					<server>github</server>
+					<message>Creating site for "${project.version}"</message>
+				</configuration>
+				<executions>
+					<execution>
+						<id>github-site</id>
+						<phase>site</phase>
+						<goals>
+							<goal>site</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
 		</plugins>
 	</build>
 
