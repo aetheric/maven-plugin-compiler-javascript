@@ -16,8 +16,8 @@ Add the following to your maven build plugins.
 		<compilation_level>SIMPLE_OPTIMIZATIONS</compilation_level>
 		<recursive>true</recursive>
 		<suffix>.min.js</suffix>
-		<srcDir>${project.basedir}/src/main/javascript</js_dir>
-		<outDir>${project.build.outputDirectory}/META-INF/resources/script</js_output_dir>
+		<srcDir>${project.basedir}/src/main/javascript</srcDir>
+		<outDir>${project.build.outputDirectory}/META-INF/resources/script</outDir>
 		<appendVersion>true</appendVersion>
 		<version>1.0.0</version>
 	</configuration>
